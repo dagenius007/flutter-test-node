@@ -1,6 +1,6 @@
 import { resolveValue } from 'path-value';
 
-export const promifyResolveValue = async (obj, field) => {
+export const promifyResolveValue = (obj, field) => {
 	try {
 		return resolveValue(obj, field);
 	} catch (e) {
