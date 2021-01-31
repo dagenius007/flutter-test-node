@@ -44,8 +44,7 @@ router.post('/validate-rule', async function (req, res) {
 			value = data[field];
 		} else {
 			//replace braces with dot for cases like array nested in objects
-			const formattedField = field.replace(/\[(\w+)\]/g, '.$1');
-			value = promifyResolveValue(data, tokenizePath(formattedField));
+			value = promifyResolveValue(data, tokenizePath(field));
 		}
 
 		//check if data exist
